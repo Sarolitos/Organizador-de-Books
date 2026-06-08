@@ -47,7 +47,7 @@ organizador-livros/
 
 ---
 
-## 👤 Funcionalidades de Usuário
+##  Funcionalidades de Usuário
 
 * Cadastro de usuário
 * Login
@@ -67,59 +67,7 @@ organizador-livros/
 
 ---
 
-## 🧠 Conceitos de Programação Orientada a Objetos
-
-O projeto aplica os seguintes conceitos:
-
-### Classes e Objetos
-
-* Classe `Livro`
-* Classe `Usuario`
-
-### Encapsulamento
-
-Utilização de atributos privados:
-
-```js
-#id
-#titulo
-#autor
-#email
-#senha
-```
-
-### Getters e Setters
-
-Proteção e controle de acesso aos atributos das classes.
-
-### Modularização
-
-Uso de ES Modules:
-
-```js
-import
-export default
-```
-
-### Tratamento de Exceções
-
-Utilização de:
-
-```js
-throw new Error()
-```
-
-e
-
-```js
-try/catch
-```
-
-para validações e tratamento de erros.
-
----
-
-## 🗄️ Banco de Dados
+##  Banco de Dados
 
 Banco de dados MySQL gerenciado pelo Prisma ORM.
 
@@ -148,62 +96,8 @@ Banco de dados MySQL gerenciado pelo Prisma ORM.
 
 ---
 
-## ⚙️ Instalação
+##  Autor
 
-### Clonar o repositório
-
-```bash
-git clone https://github.com/Sarolitos/Organizador-de-Books.git
-```
-
-### Entrar na pasta
-
-```bash
-cd Organizador-de-Books
-```
-
-### Instalar dependências
-
-```bash
-npm install
-```
-
-### Configurar o arquivo .env
-
-```env
-DATABASE_URL="mysql://usuario:senha@localhost:3306/organizador_livros"
-```
-
-### Gerar o Prisma Client
-
-```bash
-npx prisma generate
-```
-
-### Criar as tabelas
-
-```bash
-npx prisma db push
-```
-
-### Executar o projeto
-
-```bash
-npm start
-```
-
----
-
-## 🌐 Acesso
-
-Após iniciar o servidor:
-
-```text
-http://localhost:3000
-```
-
----
-
-## 👨‍💻 Autor
-
-Projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos.
+* Sarah Oliveira dos Santos
+* Maria Sophia Muniz Costa
+* Sara Nicoly Santos Araújo
