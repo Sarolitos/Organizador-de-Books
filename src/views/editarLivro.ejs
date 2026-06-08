@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Editar Livro</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:40px;
+}
+
+input,
+textarea{
+    width:400px;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Editar Livro</h1>
+
+<form
+action="/livros/editar/<%= livro.id %>"
+method="POST"
+>
+
+<input
+    type="text"
+    name="titulo"
+    value="<%= livro.titulo %>"
+    required
+>
+
+<br>
+
+<input
+    type="text"
+    name="autor"
+    value="<%= livro.autor %>"
+    required
+>
+
+<br>
+
+<input
+    type="text"
+    name="genero"
+    value="<%= livro.genero %>"
+    required
+>
+
+<br>
+
+<input
+    type="number"
+    name="anoPublicacao"
+    value="<%= livro.anoPublicacao %>"
+    required
+>
+
+<br>
+
+<textarea
+    name="sinopse"
+    rows="5"
+    required
+><%= livro.sinopse %></textarea>
+
+<br>
+
+<button type="submit">
+
+Atualizar
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/livros">
+
+Voltar
+
+</a>
+
+</body>
+</html>

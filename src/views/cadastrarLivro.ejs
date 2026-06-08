@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Novo Livro</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:40px;
+}
+
+input,
+textarea{
+    width:400px;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Cadastrar Livro</h1>
+
+<form
+action="/livros/novo"
+method="POST"
+>
+
+<input
+    type="text"
+    name="titulo"
+    placeholder="Título"
+    required
+>
+
+<br>
+
+<input
+    type="text"
+    name="autor"
+    placeholder="Autor"
+    required
+>
+
+<br>
+
+<input
+    type="text"
+    name="genero"
+    placeholder="Gênero"
+    required
+>
+
+<br>
+
+<input
+    type="number"
+    name="anoPublicacao"
+    placeholder="Ano"
+    required
+>
+
+<br>
+
+<textarea
+    name="sinopse"
+    placeholder="Sinopse"
+    rows="5"
+    required
+></textarea>
+
+<br>
+
+<button type="submit">
+
+Salvar
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/livros">
+
+Voltar
+
+</a>
+
+</body>
+</html>

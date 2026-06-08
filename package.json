@@ -1,0 +1,23 @@
+{
+  "name": "organizador-livros",
+  "version": "1.0.0",
+  "description": "Projeto de Organizador de Livros",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "prisma": "prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.0.0"
+  }
+}
