@@ -36,5 +36,5 @@ router.get(
     '/logout',
     userController.logout
 );
-
+// :)
 export default router;
