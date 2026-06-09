@@ -19,5 +19,16 @@
   },
   "devDependencies": {
     "prisma": "^6.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarolitos/Organizador-de-Books.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarolitos/Organizador-de-Books/issues"
+  },
+  "homepage": "https://github.com/Sarolitos/Organizador-de-Books#readme"
 }

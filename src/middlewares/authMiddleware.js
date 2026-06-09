@@ -1,3 +1,4 @@
+
 export default function authMiddleware(
     req,
     res,
@@ -15,4 +16,3 @@ export default function authMiddleware(
     next();
 
 }
-app.use(cookieParser());

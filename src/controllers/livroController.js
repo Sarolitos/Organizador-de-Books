@@ -86,7 +86,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.status(send(error.message);
+            res.status(send(error.message));
 
         }
 

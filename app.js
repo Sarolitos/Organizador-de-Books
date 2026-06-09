@@ -60,6 +60,8 @@ app.use(
     livroRoutes
 );
 
+app.use(cookieParser());
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
