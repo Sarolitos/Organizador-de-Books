@@ -26,7 +26,7 @@ class UserController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(400).send(error.message);
 
         }
 
@@ -51,7 +51,7 @@ class UserController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(404).send(error.message);
 
         }
 
