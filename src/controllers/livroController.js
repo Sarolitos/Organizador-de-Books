@@ -16,7 +16,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(404).send(error.message);
 
         }
 
@@ -45,7 +45,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(400).send(error.message);
 
         }
 
@@ -67,7 +67,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(304).send(error.message);
 
         }
 
@@ -86,7 +86,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(send(error.message);
 
         }
 
@@ -104,7 +104,7 @@ class LivroController {
 
         } catch (error) {
 
-            res.send(error.message);
+            res.status(404).send(error.message);
 
         }
 
