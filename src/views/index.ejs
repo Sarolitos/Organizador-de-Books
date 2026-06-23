@@ -1,143 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-
-<title>Livros</title>
-
-<style>
-
-body{
-    font-family:Arial;
-    margin:40px;
-}
-
-table{
-    border-collapse:collapse;
-    width:100%;
-}
-
-table,
-th,
-td{
-    border:1px solid black;
-}
-
-th,
-td{
-    padding:10px;
-}
-
-a{
-    text-decoration:none;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <title>Livros</title>
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 
-    <h1>Organizador de Livros</h1>
+  <h1>Organizador de Livros</h1>
 
-<div class="topo">
+  <div class="topo">
 
     <form action="/livros" method="GET" class="pesquisa">
-
-        <input
-            type="text"
-            name="busca"
-            placeholder="Pesquisar livros..."
-            value="<%= busca || '' %>"
-        >
-
+      <input
+        type="text"
+        name="busca"
+        placeholder="Pesquisar livros..."
+        value="<%= busca || '' %>"
+      >
     </form>
 
     <div>
-
-        <a href="/livros/novo">Cadastrar Livro</a>
-
-        |
-
-        <a href="/logout">Sair</a>
-
+      <a href="/livros/novo">Cadastrar Livro</a>
+      |
+      <a href="/logout">Sair</a>
     </div>
 
-</div>
+  </div>
 
-<br>
+  <br><br>
 
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Gênero</th>
+        <th>Ano</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
 
-<br><br>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>ID</th>
-<th>Título</th>
-<th>Autor</th>
-<th>Gênero</th>
-<th>Ano</th>
-<th>Ações</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<% livros.forEach(livro => { %>
-
-<tr>
-
-<td>
-    <%= livro.id %>
-</td>
-
-<td>
-    <%= livro.titulo %>
-</td>
-
-<td>
-    <%= livro.autor %>
-</td>
-
-<td>
-    <%= livro.genero %>
-</td>
-
-<td>
-    <%= livro.anoPublicacao %>
-</td>
-
-<td>
-
-<a href="/livros/editar/<%= livro.id %>">
-
-Editar
-
-</a>
-
-|
-
-<a href="/livros/excluir/<%= livro.id %>">
-
-Excluir
-
-</a>
-
-</td>
-
-</tr>
-
-<% }) %>
-
-</tbody>
-
-</table>
+    <tbody>
+      <% livros.forEach(livro => { %>
+        <tr>
+          <td><%= livro.id %></td>
+          <td><%= livro.titulo %></td>
+          <td><%= livro.autor %></td>
+          <td><%= livro.genero %></td>
+          <td><%= livro.anoPublicacao %></td>
+          <td>
+            <a href="/livros/editar/<%= livro.id %>">Editar</a> |
+            <a href="/livros/excluir/<%= livro.id %>">Excluir</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
 
 </body>
 </html>

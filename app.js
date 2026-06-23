@@ -1,73 +1,29 @@
+import "dotenv/config";
 import express from 'express';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-import { fileURLToPath }
-from 'url';
+import userRoutes from './src/routes/userRoutes.js';
+import livroRoutes from './src/routes/livroRoutes.js';
 
-import userRoutes
-from './src/routes/userRoutes.js';
-
-import livroRoutes
-from './src/routes/livroRoutes.js';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
-const __filename =
-fileURLToPath(import.meta.url);
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'));
 
-const __dirname =
-path.dirname(__filename);
-
-app.set(
-    'view engine',
-    'ejs'
-);
-
-app.set(
-    'views',
-    path.join(
-        __dirname,
-        'src/views'
-    )
-);
-
-app.use(
-    bodyParser.urlencoded({
-        extended: true
-    })
-);
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.use(
-    express.static(
-        path.join(
-            __dirname,
-            'public'
-        )
-    )
-);
+// servir estáticos a partir de src/public
+app.use(express.static(path.join(__dirname, 'src/public')));
 
-app.use(
-    '/',
-    userRoutes
-);
+app.use('/', userRoutes);
+app.use('/livros', livroRoutes);
 
-app.use(
-    '/livros',
-    livroRoutes
-);
-
-app.use(cookieParser());
-
-const PORT = 3000;
-
-app.listen(PORT, () => {
-
-    console.log(
-        `Servidor rodando em http://localhost:${PORT}`
-    );
-
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
