@@ -38,17 +38,35 @@ a{
 </head>
 <body>
 
-<h1>Organizador de Livros</h1>
+    <h1>Organizador de Livros</h1>
 
-<a href="/livros/novo">
-    Cadastrar Livro
-</a>
+<div class="topo">
 
-|
+    <form action="/livros" method="GET" class="pesquisa">
 
-<a href="/logout">
-    Sair
-</a>
+        <input
+            type="text"
+            name="busca"
+            placeholder="Pesquisar livros..."
+            value="<%= busca || '' %>"
+        >
+
+    </form>
+
+    <div>
+
+        <a href="/livros/novo">Cadastrar Livro</a>
+
+        |
+
+        <a href="/logout">Sair</a>
+
+    </div>
+
+</div>
+
+<br>
+
 
 <br><br>
 
