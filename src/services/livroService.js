@@ -50,6 +50,35 @@ class LivroService {
 
     }
 
+    async buscarLivros(busca) {
+
+    return await prisma.livro.findMany({
+        where: {
+            OR: [
+                {
+                    titulo: {
+                        contains: busca
+                    }
+                },
+                {
+                    autor: {
+                        contains: busca
+                    }
+                },
+                {
+                    genero: {
+                        contains: busca
+                    }
+                }
+            ]
+        },
+        include: {
+            usuario: true
+        }
+    });
+
+}
+
     async buscarPorId(id) {
 
         return await prisma.livro.findUnique({
